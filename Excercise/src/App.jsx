@@ -1,0 +1,23 @@
+import React from 'react'
+import {Routes, Route} from 'react-router-dom'
+import Inicio from './pages/Inicio'
+import Servicios from './pages/Servicios'
+import Navbar from './pages/Navbar'
+import Productos from './pages/Productos'
+import ProductoDetalle from './pages/DetalleProductos'
+
+function App() {
+  return (
+    <div>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Inicio />} />
+        <Route path='/servicios' element={<Servicios />}/>
+        <Route path='/productos' element={<Productos/>}/>
+        <Route path='productos/:id' element={<ProductoDetalle/>}/>
+      </Routes>
+    </div>
+  )
+}
+
+export default App
