@@ -1,0 +1,230 @@
+.inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 130px;
+  padding: 60px 80px;
+  background-color: #1f1f1f;
+  min-height: calc(100vh - 140px);
+  font-family: "Roboto", sans-serif;
+}
+
+/* ===== Banner (izquierda) ===== */
+.banner {
+  background: #2b2b2b;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-img {
+  width: 100%;
+  display: block;
+  border-bottom: 3px solid #ff6f00;
+}
+
+.banner-info {
+  padding: 25px 30px 35px;
+  color: #e0e0e0;
+}
+
+.producto-nombre {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* ===== PRECIOS ===== */
+.precios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.etiqueta {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.precio {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.precio-detalle {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-top: 3px;
+}
+
+.cuota {
+  font-size: 1.9rem;
+  color: #ffb300;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ===== BOTÓN ===== */
+.boton {
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(255, 111, 0, 0.3);
+}
+
+.boton:hover {
+  background-color: #ffa726;
+  box-shadow: 0 5px 15px rgba(255, 167, 38, 0.4);
+}
+
+/* ===== PROMO EXTRA ===== */
+.promo {
+  margin-top: 25px;
+  background: #ff6f00;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.promo strong {
+  color: #fff;
+}
+
+/* ===== Columna Derecha ===== */
+.info-lateral {
+  max-width: 420px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.info-lateral h2 {
+  color: #ff6f00;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.info-lateral p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* ===== BANNER FINAL ===== */
+
+.asesor-section {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.asesor-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #ff6f00;
+}
+
+.asesor-titulo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffca28;
+  margin-bottom: 10px;
+}
+
+.asesor-subtitulo {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.asesor-botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.asesor-btn {
+  background: transparent;
+  border: 2px solid #ff6f00;
+  color: #ff6f00;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.asesor-btn:hover {
+  background: #ff6f00;
+  color: #1f1f1f;
+}
+
+.asesor-btn.whatsapp {
+  border-color: #25d366;
+  color: #25d366;
+}
+
+.asesor-btn.whatsapp:hover {
+  background: #25d366;
+  color: #1f1f1f;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .inicio {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .info-lateral {
+    max-width: 90%;
+  }
+}
+
+/* ===== BANNER FINAL ===== */
+
+@media (max-width: 600px) {
+  .asesor-section {
+    padding: 30px 15px;
+  }
+  .asesor-botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
