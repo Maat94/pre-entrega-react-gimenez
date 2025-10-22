@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Carrito.css';
 
 export default function CarritoCompras({ carrito, setCarrito }) {
+  const navigate = useNavigate();
+
   const vaciarCarrito = () => {
     setCarrito([]);
+  };
+
+  const irAPagar = () => {
+    navigate('/pagar', { state: { carrito } });
   };
 
   const total = carrito.reduce((sum, item) => sum + Number(item.precio), 0);
@@ -40,9 +47,14 @@ export default function CarritoCompras({ carrito, setCarrito }) {
             <p>Total: ${Number(total).toLocaleString('es-AR')}</p>
           </div>
 
-          <button className="carrito-boton" onClick={vaciarCarrito}>
-            Vaciar Carrito
-          </button>
+          <div className="carrito-botones">
+            <button className="carrito-boton vaciar" onClick={vaciarCarrito}>
+              Vaciar Carrito
+            </button>
+            <button className="carrito-boton pagar" onClick={irAPagar}>
+              Pagar
+            </button>
+          </div>
         </>
       )}
     </div>
